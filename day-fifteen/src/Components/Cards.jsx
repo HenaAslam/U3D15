@@ -15,7 +15,7 @@ const Cards = (props) => {
         {isFav ? (
           <HeartFill
             color="green"
-            size={16}
+            size={20}
             className="mr-2 my-auto"
             onClick={() =>
               dispatch({
@@ -27,7 +27,7 @@ const Cards = (props) => {
         ) : (
           <Heart
             color="green"
-            size={16}
+            size={20}
             className="mr-2 my-auto"
             onClick={() =>
               dispatch({
