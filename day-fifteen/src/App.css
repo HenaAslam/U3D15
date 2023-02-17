@@ -1,0 +1,39 @@
+body{
+  background: rgb(76,76,74);
+ 
+}
+.navbar{
+  background: rgb(76,76,74) !important;
+  background: linear-gradient(180deg, rgba(76,76,74,1) 0%, rgba(18,18,18,1) 51%)!important;
+}
+
+ .card img{
+
+  border-radius: 20px;
+  
+}
+.card .card-title{
+  font-size: 16px;
+}
+
+.card{
+background-color: rgb(35, 33, 33);
+transition: background-color 400ms;
+height:400px;
+color:white
+}
+.card:hover{
+  background-color: rgb(71, 66, 66);
+}
+
+.foo{
+  height:15vh;
+ 
+}
+
+.good-morning{
+  background: rgba(20, 19, 19, 0.3);
+ 
+  border-top-right-radius:8px;
+  border-bottom-right-radius: 8px;
+}
