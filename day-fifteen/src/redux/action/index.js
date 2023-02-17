@@ -1,6 +1,7 @@
 export const GET_SONG ="GET_SONG"
 export const ADD_TO_FAVOURITE="ADD_TO_FAVOURITE"
 export const REMOVE_FROM_FAVOURITE= "REMOVE_FROM_FAVOURITE"
+export const SELECT_SONG="SELECT_SONG"
 
 
 export const getSong = (search) => {
@@ -34,9 +35,12 @@ export const getSong = (search) => {
 
 
 
-// export const removeFromFavAction=(song)=>{
-//   return(
-//     type: REMOVE_FROM_FAVOURITE,
-//     payload:song
-//   )
-// }
+export const selectSongAction=(song)=>{
+  return{
+    type: SELECT_SONG,
+    payload:song
+  }
+
+}
+
+

@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 import { Heart, HeartFill } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
-import { ADD_TO_FAVOURITE, REMOVE_FROM_FAVOURITE } from "../redux/action";
+import { REMOVE_FROM_FAVOURITE, ADD_TO_FAVOURITE } from "../redux/action";
 const Cards = (props) => {
   const favourites = useSelector((state) => state.fav.list);
   const isFav = favourites.includes(props.song);

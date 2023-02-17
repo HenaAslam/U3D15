@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Col, Row } from "react-bootstrap";
 import Cards from "./Cards";
 
+import { selectSongAction } from "../redux/action";
+
 const Favourites = () => {
   const favourites = useSelector((state) => state.fav.list);
   console.log(favourites);
@@ -14,10 +16,7 @@ const Favourites = () => {
           key={s.id}
           className="mb-5"
           onClick={() => {
-            dispatch({
-              type: "SELECT_SONG",
-              payload: { s },
-            });
+            dispatch(selectSongAction({ s }));
           }}
         >
           <Cards song={s} />
@@ -28,9 +27,3 @@ const Favourites = () => {
 };
 
 export default Favourites;
-
-//   key={s.id}
-//
-
-// >
-//   <Cards song={s} />

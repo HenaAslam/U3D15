@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { getSong } from "../redux/action";
+import { getSong, selectSongAction } from "../redux/action";
 import { useEffect } from "react";
 import Cards from "./Cards";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
@@ -32,10 +32,7 @@ const Playlist = () => {
                   key={s.id}
                   className="h-100"
                   onClick={() => {
-                    dispatch({
-                      type: "SELECT_SONG",
-                      payload: { s },
-                    });
+                    dispatch(selectSongAction({ s }));
                   }}
                 >
                   <VerticalCard song={s} />
@@ -58,10 +55,7 @@ const Playlist = () => {
                   key={s.id}
                   className="h-100"
                   onClick={() => {
-                    dispatch({
-                      type: "SELECT_SONG",
-                      payload: { s },
-                    });
+                    dispatch(selectSongAction({ s }));
                   }}
                 >
                   <Cards song={s} />
@@ -83,10 +77,7 @@ const Playlist = () => {
                   key={s.id}
                   className="h-100"
                   onClick={() => {
-                    dispatch({
-                      type: "SELECT_SONG",
-                      payload: { s },
-                    });
+                    dispatch(selectSongAction({ s }));
                   }}
                 >
                   <Cards song={s} />

@@ -1,3 +1,4 @@
+import { SELECT_SONG } from "../action"
 
 
 const initialState = {
@@ -7,7 +8,7 @@ const initialState = {
  const selectReducer=(state=initialState, action)=>
  {
    switch(action.type){
-    case  "SELECT_SONG":
+    case  SELECT_SONG:
       return {
         ...state,
         selectedSong:action.payload
