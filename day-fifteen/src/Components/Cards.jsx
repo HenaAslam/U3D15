@@ -1,5 +1,5 @@
 import { Card } from "react-bootstrap";
-import { Heart, HeartFill } from "react-bootstrap-icons";
+import { HeartFill } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { REMOVE_FROM_FAVOURITE, ADD_TO_FAVOURITE } from "../redux/action";
 const Cards = (props) => {
@@ -15,8 +15,8 @@ const Cards = (props) => {
         {isFav ? (
           <HeartFill
             color="green"
-            size={20}
-            className="mr-2 my-auto"
+            size={25}
+            className="mr-2 my-auto green"
             onClick={() =>
               dispatch({
                 type: REMOVE_FROM_FAVOURITE,
@@ -25,10 +25,10 @@ const Cards = (props) => {
             }
           />
         ) : (
-          <Heart
-            color="green"
-            size={20}
-            className="mr-2 my-auto"
+          <HeartFill
+            color="white"
+            size={25}
+            className="mr-2 my-auto white"
             onClick={() =>
               dispatch({
                 type: ADD_TO_FAVOURITE,

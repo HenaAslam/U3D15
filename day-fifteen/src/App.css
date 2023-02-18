@@ -1,5 +1,28 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/Gotham-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("../public/fonts/Gotham-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham-Thin";
+  src: url("../public/fonts/Gotham-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("../public/fonts/Gotham-Light.otf") format("opentype");
+}
+
+
+
+
 body{
   background: rgb(76,76,74);
+  font-family: "Gotham"
  
 }
 .navbar{
@@ -36,4 +59,67 @@ color:white
  
   border-top-right-radius:8px;
   border-bottom-right-radius: 8px;
+}
+
+.white{
+
+  animation:tilt-n-move-shaking 200ms linear
+}
+
+.green{
+   animation:fade2 1s linear; 
+
+}
+
+
+
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+   opacity: 1;
+  }
+}
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.side{
+  background-color: black;
+  height:80vh;
+  position:fixed;
+  min-width:180px;
+  color:white
+}
+
+
+.left-icons{
+  height:20px;
+  padding-right:10px;
+  filter: grayscale(100%) invert(100%);
+  -webkit-filter: grayscale(100%) invert(100%);
+  -moz-filter: grayscale(100%) invert(100%);
+}
+.side p{
+  padding-left: 30px;
+}
+.side a{
+  color:white;
+  
+}
+.side a:hover{
+  text-decoration: none;
+  color:rgb(182, 187, 192)
+}
+.jumbotron{
+  background-color: transparent;
+  border-bottom: 1px solid black;
+}
+.jumbotron h1{
+  font-size: 80px;
 }

@@ -14,7 +14,7 @@ const NavbarComponent = () => {
   };
 
   return (
-    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" fixed="top">
       <Link to="/">
         <div className="navbar-brand">
           <img
@@ -29,11 +29,7 @@ const NavbarComponent = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Link to="/favourites">
-            <div className="nav-link mr-3"> Favourites</div>
-          </Link>
-
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} className="hidden">
             <Form.Group>
               <Form.Control
                 type="text"

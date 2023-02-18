@@ -19,7 +19,7 @@ const Playlist = () => {
   return (
     <>
       <Container>
-        <h3 className="text-white mt-4 d-flex justify-content-between align-items-end">
+        <h3 className="text-white mt-5 pt-5 d-flex justify-content-between align-items-end ">
           <span>Good Morning</span>
         </h3>
         <Row>
