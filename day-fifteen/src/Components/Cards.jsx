@@ -9,34 +9,41 @@ const Cards = (props) => {
   return (
     <Card>
       <Card.Img variant="top" src={props.song.album.cover_medium} />
-      <Card.Body className="d-flex flex-column justify-content-evenly ">
-        <Card.Title>{props.song.title}</Card.Title>
-        <Card.Text>{props.song.artist.name}</Card.Text>
-        {isFav ? (
-          <HeartFill
-            color="green"
-            size={25}
-            className="mr-2 my-auto green"
-            onClick={() =>
-              dispatch({
-                type: REMOVE_FROM_FAVOURITE,
-                payload: props.song,
-              })
-            }
-          />
-        ) : (
-          <HeartFill
-            color="white"
-            size={25}
-            className="mr-2 my-auto white"
-            onClick={() =>
-              dispatch({
-                type: ADD_TO_FAVOURITE,
-                payload: props.song,
-              })
-            }
-          />
-        )}
+      <div className="play-btn">
+        <div className="triangle"></div>
+      </div>
+      <Card.Body className="d-flex justify-content-between">
+        <div>
+          <Card.Title>{props.song.title}</Card.Title>
+          <Card.Text>{props.song.artist.name}</Card.Text>
+        </div>
+        <div>
+          {isFav ? (
+            <HeartFill
+              color="green"
+              size={25}
+              className="mr-2 my-auto green"
+              onClick={() =>
+                dispatch({
+                  type: REMOVE_FROM_FAVOURITE,
+                  payload: props.song,
+                })
+              }
+            />
+          ) : (
+            <HeartFill
+              color="white"
+              size={25}
+              className="mr-2 my-auto white"
+              onClick={() =>
+                dispatch({
+                  type: ADD_TO_FAVOURITE,
+                  payload: props.song,
+                })
+              }
+            />
+          )}
+        </div>
       </Card.Body>
     </Card>
   );

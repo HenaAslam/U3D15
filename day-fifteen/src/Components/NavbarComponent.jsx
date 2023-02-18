@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { Navbar, Nav, NavDropdown, Form } from "react-bootstrap";
+import { Navbar, Nav, Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getSong } from "../redux/action";
+import { useSelector } from "react-redux";
 
 const NavbarComponent = () => {
   const [play, setPlay] = useState("");
   const dispatch = useDispatch();
+  let search = useSelector((state) => state.songDetails.search);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,8 +30,8 @@ const NavbarComponent = () => {
 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ml-auto">
-          <Form onSubmit={handleSubmit} className="hidden">
+        <Nav className="mr-auto ml-2 mt-2">
+          <Form onSubmit={handleSubmit} className={search ? "hidden" : ""}>
             <Form.Group>
               <Form.Control
                 type="text"
@@ -39,11 +41,11 @@ const NavbarComponent = () => {
               />
             </Form.Group>
           </Form>
-          <NavDropdown
-            title="Diego 'Ziba'"
-            id="collasible-nav-dropdown"
-            className="rounded pill"
-          ></NavDropdown>
+        </Nav>
+        <Nav className="ml-auto">
+          <Button className="btn btn-secondary dropdown-toggle rounded-pill">
+            Hena
+          </Button>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

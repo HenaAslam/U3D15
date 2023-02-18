@@ -21,7 +21,7 @@ const Favourites = () => {
           {favourites.length > 0 ? (
             favourites.map((s) => (
               <Col
-                xs={2}
+                xs={3}
                 key={s.id}
                 className="mb-5"
                 onClick={() => {

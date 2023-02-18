@@ -33,6 +33,7 @@ body{
  .card img{
 
   border-radius: 20px;
+
   
 }
 .card .card-title{
@@ -43,7 +44,8 @@ body{
 background-color: rgb(35, 33, 33);
 transition: background-color 400ms;
 height:400px;
-color:white
+color:white;
+
 }
 .card:hover{
   background-color: rgb(71, 66, 66);
@@ -51,7 +53,14 @@ color:white
 
 .foo{
   height:15vh;
+
  
+}
+.foo h6:last-of-type{
+  font-family: "Gotham-Thin";
+}
+.card-text{
+  font-family: "Gotham-Light"
 }
 
 .good-morning{
@@ -59,6 +68,7 @@ color:white
  
   border-top-right-radius:8px;
   border-bottom-right-radius: 8px;
+  font-family: "Gotham-Light"
 }
 
 .white{
@@ -94,6 +104,7 @@ color:white
   height:80vh;
   position:fixed;
   min-width:180px;
+  
   color:white
 }
 
@@ -112,6 +123,9 @@ color:white
   color:white;
   
 }
+.side p{
+  cursor:pointer
+}
 .side a:hover{
   text-decoration: none;
   color:rgb(182, 187, 192)
@@ -122,4 +136,83 @@ color:white
 }
 .jumbotron h1{
   font-size: 80px;
+}
+
+.hidden{
+  display: none;
+}
+
+.card .play-btn {
+  position: absolute;
+  top:50%;
+  left: 78%;
+  width: 40px;
+  height: 40px;
+  background-color: #1DB954;
+  border-radius: 50%;
+ transform: translateY(48px);
+ opacity:0;
+ transition: transform 400ms, opacity 400ms;
+ cursor:pointer
+  
+}
+.play-btn .triangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent #090e14;
+}
+.play-btn:hover{
+  transform: scale(1.3) !important;
+  box-shadow: inset 2px 4px 50px -30px rgba(0,0,0,0.72)
+}
+.card:hover .play-btn{
+  transform: translateY(0px);
+  transform: scale(1.2);
+  opacity:1;
+} 
+
+.play-bar-icons{
+  height:14px;
+  filter: grayscale(100%) invert(100%);
+  -webkit-filter: grayscale(100%) invert(100%);
+  -moz-filter: grayscale(100%) invert(100%);
+  margin-right:10px;
+  
+
+}
+
+.play-bar-icons-big{
+  margin-top: 0.8em;
+  height:20px;
+  margin-right:40px;
+}
+.play-button{
+  height:40px;
+  margin-right:40px;
+}
+.play-line-div{
+  display:flex;
+  justify-content: center;
+}
+.play-line-div p{
+  margin-top: 0.5em;
+}
+.play-line-div p:nth-of-type(1){
+  margin-right: 3px;
+}
+.play-line-div p:nth-of-type(2){
+  margin-left: 3px;
+}
+.volume-line{
+  background-color: #555555;
+  height:5px;
+  width:500px;
 }

@@ -10,7 +10,7 @@ const Playlist = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getSong("rock"));
+    dispatch(getSong("coldplay"));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -19,7 +19,7 @@ const Playlist = () => {
   return (
     <>
       <Container>
-        <h3 className="text-white mt-5 pt-5 d-flex justify-content-between align-items-end ">
+        <h3 className="text-white mt-5 pt-5 ">
           <span>Good Morning</span>
         </h3>
         <Row>
@@ -43,13 +43,13 @@ const Playlist = () => {
           )}
         </Row>
 
-        <h3 className="text-white mt-4 d-flex justify-content-between align-items-end">
+        <h3 className="text-white mt-4  ">
           <span>Recently played</span>
         </h3>
         <Row>
           {songFromReduxStore.length > 0 ? (
             songFromReduxStore[songFromReduxStore.length - 1].data
-              .slice(0, 5)
+              .slice(0, 4)
               .map((s) => (
                 <Col
                   key={s.id}
@@ -65,13 +65,13 @@ const Playlist = () => {
             <Spinner animation="border" variant="success" />
           )}
         </Row>
-        <h3 className="text-white mt-4 d-flex justify-content-between align-items-end">
+        <h3 className="text-white mt-4  ">
           <span>Shows to try</span>
         </h3>
         <Row style={{ marginBottom: "8rem" }}>
           {songFromReduxStore.length > 0 ? (
             songFromReduxStore[songFromReduxStore.length - 1].data
-              .slice(6, 11)
+              .slice(6, 10)
               .map((s) => (
                 <Col
                   key={s.id}

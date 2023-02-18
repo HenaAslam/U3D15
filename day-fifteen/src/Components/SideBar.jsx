@@ -1,31 +1,42 @@
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 const SideBar = () => {
+  let search = useSelector((state) => state.songDetails.search);
+
+  const dispatch = useDispatch();
   return (
     <div className="side mt-5 pt-5">
       <Link to="/">
         <p>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/2048px-Home-icon.svg.png"
-            class="left-icons"
+            className="left-icons"
             alt=""
           />
           Home
         </p>
       </Link>
 
-      <p>
+      <p
+        onClick={() => {
+          dispatch({
+            type: "SEARCH_BAR",
+            payload: !search,
+          });
+        }}
+      >
         <img
           src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-5.png"
           alt=""
-          class="left-icons"
+          className="left-icons"
         />
         Search
       </p>
       <p>
         <img
           src="https://icon-library.com/images/add-to-playlist-icon/add-to-playlist-icon-12.jpg"
-          class="left-icons"
+          className="left-icons"
           alt=""
         />
         Your Library
@@ -35,13 +46,13 @@ const SideBar = () => {
         <p>
           <img
             src="https://cdn0.iconfinder.com/data/icons/spotify-line-ui-kit/100/save-to-your-liked-songs-512.png"
-            class="left-icons"
+            className="left-icons"
             alt=""
           />
           Liked Songs
         </p>
       </Link>
-      <hr class="aside-hr"></hr>
+      <hr className="aside-hr"></hr>
     </div>
   );
 };
