@@ -6,10 +6,16 @@ const Cards = (props) => {
   const favourites = useSelector((state) => state.fav.list);
   const isFav = favourites.includes(props.song);
   const dispatch = useDispatch();
+  const audio = new Audio(props.song.preview);
+
+  const start = () => {
+    audio.play();
+  };
+
   return (
     <Card>
       <Card.Img variant="top" src={props.song.album.cover_medium} />
-      <div className="play-btn">
+      <div className="play-btn" onClick={() => start()}>
         <div className="triangle"></div>
       </div>
       <Card.Body className="d-flex justify-content-between">

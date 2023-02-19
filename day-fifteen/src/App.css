@@ -229,3 +229,10 @@ color:white;
   margin-left:10vw;
   margin-right: 10vw;
 }
+.select-msg h6{
+  font-family: "Gotham-Bold"!important;
+  font-size: 18px !important;
+  text-align: center !important;
+  color:white;
+  width:100vw;
+}
