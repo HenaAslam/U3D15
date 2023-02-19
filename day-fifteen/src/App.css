@@ -43,7 +43,7 @@ body{
 .card{
 background-color: rgb(35, 33, 33);
 transition: background-color 400ms;
-height:400px;
+/* height:400px; */
 color:white;
 
 }
@@ -52,15 +52,23 @@ color:white;
 }
 
 .foo{
-  height:15vh;
-
+  height:14vh;
+  width:100%;
+  margin-top:500px;
+  
  
+}
+.foo h6{
+  font-size: 13px;
+  width: 15vw
 }
 .foo h6:last-of-type{
   font-family: "Gotham-Thin";
+
 }
 .card-text{
-  font-family: "Gotham-Light"
+  font-family: "Gotham-Light";
+ 
 }
 
 .good-morning{
@@ -101,9 +109,9 @@ color:white;
 
 .side{
   background-color: black;
-  height:80vh;
+  height:90vh;
   position:fixed;
-  min-width:180px;
+  min-width:15vw;
   
   color:white
 }
@@ -195,12 +203,13 @@ color:white;
   margin-right:40px;
 }
 .play-button{
-  height:40px;
+  height:35px;
   margin-right:40px;
 }
 .play-line-div{
   display:flex;
   justify-content: center;
+
 }
 .play-line-div p{
   margin-top: 0.5em;
@@ -215,4 +224,8 @@ color:white;
   background-color: #555555;
   height:5px;
   width:500px;
+}
+.play{
+  margin-left:10vw;
+  margin-right: 10vw;
 }

@@ -40,11 +40,11 @@ const Footer = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#features">
+          <Nav.Link href="#">
             {sel ? (
               <>
                 {" "}
-                <div className="d-flex mt-5" style={{ gap: "10px" }}>
+                <div className="d-flex" style={{ gap: "10px" }}>
                   <img
                     src={sel.s.album.cover_medium}
                     alt="gvh"
@@ -56,7 +56,7 @@ const Footer = () => {
                     <h6>{sel.s.title}</h6>
                     <h6>{sel.s.artist.name}</h6>
                   </div>
-                  <div className="ml-5 pl-5 mt-n3">
+                  <div className=" mt-n3 play">
                     <div className=" d-flex justify-content-center ml-5 pl-5">
                       <img
                         src="https://cdn-icons-png.flaticon.com/512/3580/3580337.png"
@@ -88,7 +88,7 @@ const Footer = () => {
                       />
                     </div>
 
-                    <div className="play-line-div">
+                    <div className="play-line-div pb-n5 mb-n5">
                       <p>0:00</p>
                       <input
                         className="volume-line mt-3"
@@ -98,7 +98,7 @@ const Footer = () => {
                       />
 
                       <p>
-                        {minutes} : {seconds < 10 ? "0" + seconds : seconds}
+                        {minutes}:{seconds < 10 ? "0" + seconds : seconds}
                       </p>
                     </div>
                   </div>
@@ -131,7 +131,10 @@ const Footer = () => {
                           .data[0].artist.name
                       }
                     </h6>
-                    <div className="ml-5 pl-5 " style={{ marginTop: "-4rem" }}>
+                    <div
+                      className="ml-5 pl-5 play "
+                      style={{ marginTop: "-4rem" }}
+                    >
                       <div className=" d-flex justify-content-center ml-5 pl-5">
                         <img
                           src="https://cdn-icons-png.flaticon.com/512/3580/3580337.png"

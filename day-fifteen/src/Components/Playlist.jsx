@@ -18,7 +18,7 @@ const Playlist = () => {
 
   return (
     <>
-      <Container>
+      <Container fluid>
         <h3 className="text-white mt-5 pt-5 ">
           <span>Good Morning</span>
         </h3>
@@ -28,7 +28,9 @@ const Playlist = () => {
               .slice(15, 21)
               .map((s) => (
                 <Col
-                  xs={4}
+                  xs={12}
+                  sm={6}
+                  md={4}
                   key={s.id}
                   className="h-100"
                   onClick={() => {
@@ -46,14 +48,14 @@ const Playlist = () => {
         <h3 className="text-white mt-4  ">
           <span>Recently played</span>
         </h3>
-        <Row>
+        <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
           {songFromReduxStore.length > 0 ? (
             songFromReduxStore[songFromReduxStore.length - 1].data
-              .slice(0, 4)
+              .slice(0, 5)
               .map((s) => (
                 <Col
                   key={s.id}
-                  className="h-100"
+                  className="d-flex align-items-stretch mb-3"
                   onClick={() => {
                     dispatch(selectSongAction({ s }));
                   }}
@@ -68,14 +70,17 @@ const Playlist = () => {
         <h3 className="text-white mt-4  ">
           <span>Shows to try</span>
         </h3>
-        <Row style={{ marginBottom: "8rem" }}>
+        <Row
+          style={{ marginBottom: "8rem" }}
+          className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5"
+        >
           {songFromReduxStore.length > 0 ? (
             songFromReduxStore[songFromReduxStore.length - 1].data
-              .slice(6, 10)
+              .slice(6, 11)
               .map((s) => (
                 <Col
                   key={s.id}
-                  className="h-100"
+                  className="d-flex align-items-stretch mb-3"
                   onClick={() => {
                     dispatch(selectSongAction({ s }));
                   }}
